@@ -1,0 +1,122 @@
+header: 
+  seq: 257
+  stamp: 
+    secs: 1572425658
+    nsecs: 487027797
+  frame_id: ''
+status: 
+  - 
+    level: 0
+    name: "mobile_base_nodelet_manager: Battery"
+    message: "Maximum"
+    hardware_id: "Kobuki"
+    values: 
+      - 
+        key: "Voltage (V)"
+        value: "16.1"
+      - 
+        key: "Percent"
+        value: "100"
+      - 
+        key: "Charge (Ah)"
+        value: "2.2"
+      - 
+        key: "Capacity (Ah)"
+        value: "2.2"
+      - 
+        key: "Source"
+        value: "Adapter"
+      - 
+        key: "Charging State"
+        value: "Trickle Charging"
+      - 
+        key: "Current (A)"
+        value: "3.14"
+  - 
+    level: 0
+    name: "mobile_base_nodelet_manager: Watchdog"
+    message: "Alive"
+    hardware_id: "Kobuki"
+    values: []
+  - 
+    level: 0
+    name: "mobile_base_nodelet_manager: Wall Sensor"
+    message: "All right"
+    hardware_id: "Kobuki"
+    values: 
+      - 
+        key: "Left"
+        value: "NO"
+      - 
+        key: "Center"
+        value: "NO"
+      - 
+        key: "Right"
+        value: "NO"
+  - 
+    level: 0
+    name: "mobile_base_nodelet_manager: Cliff Sensor"
+    message: "All right"
+    hardware_id: "Kobuki"
+    values: 
+      - 
+        key: "Left"
+        value: "Reading: 1648  Cliff: NO"
+      - 
+        key: "Center"
+        value: "Reading: 1943  Cliff: NO"
+      - 
+        key: "Right"
+        value: "Reading: 1648  Cliff: NO"
+  - 
+    level: 0
+    name: "mobile_base_nodelet_manager: Wheel Drop"
+    message: "All right"
+    hardware_id: "Kobuki"
+    values: 
+      - 
+        key: "Left"
+        value: "NO"
+      - 
+        key: "Right"
+        value: "NO"
+  - 
+    level: 0
+    name: "mobile_base_nodelet_manager: Motor Current"
+    message: "All right"
+    hardware_id: "Kobuki"
+    values: 
+      - 
+        key: "Left"
+        value: "0"
+      - 
+        key: "Right"
+        value: "0"
+  - 
+    level: 0
+    name: "mobile_base_nodelet_manager: Motor State"
+    message: "Motors Enabled"
+    hardware_id: "Kobuki"
+    values: 
+      - 
+        key: "State"
+        value: "1"
+  - 
+    level: 0
+    name: "mobile_base_nodelet_manager: Gyro Sensor"
+    message: "Heading: 3.02 degrees"
+    hardware_id: "Kobuki"
+    values: []
+  - 
+    level: 0
+    name: "mobile_base_nodelet_manager: Digital Input"
+    message: "[0, 0, 0, 0]"
+    hardware_id: "Kobuki"
+    values: []
+  - 
+    level: 0
+    name: "mobile_base_nodelet_manager: Analog Input"
+    message: "[4095, 4095, 4095, 4095]"
+    hardware_id: "Kobuki"
+    values: []
+---

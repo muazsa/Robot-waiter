@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <node pkg="barista_gazebo"
+        type="move_to_table_action_server.py"
+        name="move_to_table_action_server_node"
+        output="screen">
+      <param name="way_points_file_path"
+              type="string"
+              value="$(find barista_gazebo)/waypoints_saved/closerfinalmap.pickle" />
+  </node>
+
+
+</launch>

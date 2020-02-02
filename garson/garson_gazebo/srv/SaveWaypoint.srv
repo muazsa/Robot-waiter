@@ -1,0 +1,3 @@
+string name       # Name of the waypoint, SAVE is reserved for saving command
+---
+bool success         # Did the operation succeed?

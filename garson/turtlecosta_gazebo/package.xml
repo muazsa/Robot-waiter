@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <name>turtlecosta_gazebo</name>
+  <version>0.0.0</version>
+  <description>The turtlecosta_gazebo package</description>
+
+  <maintainer email="user@todo.todo">user</maintainer>
+  <license>TODO</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <!-- The export tag contains other, unspecified, tags -->
+  <build_depend>gazebo_ros</build_depend>
+  <run_depend>gazebo_ros</run_depend>
+    <export>
+    <gazebo_ros gazebo_model_path="${prefix}/models"/>
+  </export>
+</package>

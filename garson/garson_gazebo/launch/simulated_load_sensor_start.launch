@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <node pkg="barista_gazebo"
+        type="simulated_loadsensor_driver.py"
+        name="simulated_loadsensor_driver_node"
+        output="screen">
+  </node>
+  
+
+</launch>

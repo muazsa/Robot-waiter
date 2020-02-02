@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <arg name="pause" default="false"/>
+  <arg name="x" default="0"/>
+  <arg name="y" default="0"/>
+  <arg name="z" default="0.0"/>
+  <arg name="roll" default="0"/>
+  <arg name="pitch" default="0"/>
+  <arg name="yaw" default="0" />
+
+  <include file="$(find barista_worlds)/launch/start_world_simple10x10.launch">
+    <arg name="pause" value="$(arg pause)" />
+
+    <arg name="put_robot_in_world" value="true" />
+    <arg name="put_robot_in_world_package" value="barista_gazebo" />
+    <arg name="put_robot_in_world_launch" value="put_robot_in_world.launch" />
+
+    <arg name="x" value="$(arg x)" />
+    <arg name="y" value="$(arg y)" />
+    <arg name="z" value="$(arg z)" />
+    <arg name="roll" value="$(arg roll)"/>
+    <arg name="pitch" value="$(arg pitch)"/>
+    <arg name="yaw" value="$(arg yaw)"/>
+  </include>
+  
+  <include file="$(find barista_description)/launch/rviz_localization.launch"/>
+
+
+</launch>

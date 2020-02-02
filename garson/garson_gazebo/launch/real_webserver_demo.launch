@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <arg name="real_barista" default="true" />
+  <!--<arg name="map_name" default="simple10x10"/>-->
+  <!--<arg name="map_name" default="casa"/>-->
+  <arg name="map_name" default="costa"/>
+  <arg name="speak_active" default="true" />
+
+
+  <!-- Start Barista basic hardware systems -->
+  <!--
+  <include file="$(find barista_systems)/launch/start_real_barista_systems.launch"/>
+  -->
+
+  <!-- Start the navigation systems -->
+  <include file="$(find costa_robot)/launch/localization_demo.launch">
+    <arg name="map_name" value="$(arg map_name)"/>
+  </include>
+
+  <!-- We start the waypoint generator to be able to reset tables on the fly -->
+
+  <node pkg="ros_waypoint_generator"
+          type="ros_waypoint_generator"
+          name="ros_waypoint_generator_node">
+    </node>
+
+
+  <!-- To Play sound for customer feedback -->
+  <group if="$(arg speak_active)">
+    <include file="$(find barista_systems)/launch/droid_talker.launch"/>
+  </group>
+
+
+  <!-- Diagnostics to battery pub -->
+  <node name="battery_charge_pub_node" pkg="barista_systems" type="battery_charge_pub.py"
+      respawn="false" output="screen">
+  </node>
+
+
+  <!-- Start the Pipeline -->
+
+  <node pkg="barista_gazebo"
+        type="real_webserver_demo.py"
+        name="real_webserver_demo_node"
+        output="screen"
+        args="$(arg speak_active)">
+      <param name="way_points_file_path"
+              type="string"
+              value="$(find barista_gazebo)/waypoints_saved/$(arg map_name).pickle" />
+  </node>
+
+
+
+
+
+</launch>
